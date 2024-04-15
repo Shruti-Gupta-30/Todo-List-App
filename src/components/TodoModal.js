@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/modules/modal.module.css";
+import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { MdOutlineClose } from "react-icons/md";
 import Button from "./Button";
@@ -19,9 +20,14 @@ function TodoModal({ modalOpen, setModalOpen }) {
 					id: uuid(),
 					title,
 					status,
-					time: new Date().toLocaleDateString(),
+					time: new Date().toLocaleString("en-US", { hour12: true }), //Getting time in supportable format to be displayed late using date-fns
 				})
 			);
+			//Adding pop-up messages
+			toast.success("Task added successfully");
+			setModalOpen(false);
+		} else {
+			toast.error("Title shouldn't be empty");
 		}
 	};
 
