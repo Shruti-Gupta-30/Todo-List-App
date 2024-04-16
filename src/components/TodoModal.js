@@ -30,7 +30,7 @@ const boxAppear = {
 };
 
 function TodoModal({ type, modalOpen, setModalOpen, todo }) {
-	const [title, setTitle] = useState("");
+	const [title, setTitle] = useState(" ");
 	const [status, setStatus] = useState("incomplete");
 	const dispatch = useDispatch();
 
@@ -59,7 +59,7 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
 				dispatch(
 					addTodo({
 						id: uuid(),
-						title,
+						title: title,
 						status,
 						time: new Date().toLocaleString("en-US", { hour12: true }), //Getting time in supportable format to be displayed late using date-fns
 					})
