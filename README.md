@@ -1,8 +1,9 @@
-![LaptopView-ss](https://github.com/Shruti-Gupta-30/Todo-List-App/assets/95923536/8c2dc4d5-9fa5-4c16-9fd2-d6deaddd2812)
+![LaptopView-ss](https://github.com/Shruti-Gupta-30/Todo-List-App/assets/95923536/0b6d6c3b-4881-4ed4-89ba-44298a8a3f57)
+
 
 # React ToDo Application
 
-Live Demo: todo-list--task.vercel.app
+Live Demo: [todo-list--task.vercel.app](todo-list--task.vercel.app)
 
 ## Setting up the app on your device
 
@@ -16,9 +17,9 @@ After opening the file in a code editor, **open the terminal**(windows or code e
 After that start the dev server `npm start`
 
 
-![TabletView-ss](https://github.com/Shruti-Gupta-30/Todo-List-App/assets/95923536/15e878a5-33c4-4452-8838-44869a13da5e)
+![TabletView-ss](https://github.com/Shruti-Gupta-30/Todo-List-App/assets/95923536/5ad68abb-f7ed-4cdc-98d4-01528f767098)
 
 
-![MobileView-ss](https://github.com/Shruti-Gupta-30/Todo-List-App/assets/95923536/7f180ac5-643e-4369-a80b-515fe2b364eb)
+![MobileView-ss](https://github.com/Shruti-Gupta-30/Todo-List-App/assets/95923536/dccc439d-1dfc-4c56-938a-8f083d1cdbf3)
 
 
