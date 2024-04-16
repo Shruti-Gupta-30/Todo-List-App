@@ -47,11 +47,6 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		//For updating the Todo
-		if (title === "") {
-			toast.error("Please enter a title");
-			return;
-		}
 
 		//Sending todo data data to the store to be added to the list
 		if (title && status) {
@@ -59,13 +54,18 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
 				dispatch(
 					addTodo({
 						id: uuid(),
-						title: title,
+						title,
 						status,
 						time: new Date().toLocaleString("en-US", { hour12: true }), //Getting time in supportable format to be displayed late using date-fns
 					})
 				);
 				//Adding pop-up message
 				toast.success("Task added successfully");
+			}
+			//For updating the Todo
+			if (title === "") {
+				toast.error("Please enter a title");
+				return;
 			}
 
 			//When todo is edited

@@ -18,9 +18,7 @@ const reactRoot = ReactDOM.createRoot(rootDiv);
 
 // Inject our App component into the react node
 reactRoot.render(
-	<React.StrictMode>
-		<Provider store={store}>
-			<App />
-		</Provider>
-	</React.StrictMode>
+	<Provider store={store}>
+		<App />
+	</Provider>
 );
