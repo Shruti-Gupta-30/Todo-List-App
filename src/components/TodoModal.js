@@ -30,9 +30,9 @@ const boxAppear = {
 };
 
 function TodoModal({ type, modalOpen, setModalOpen, todo }) {
+	const dispatch = useDispatch();
 	const [title, setTitle] = useState(" ");
 	const [status, setStatus] = useState("incomplete");
-	const dispatch = useDispatch();
 
 	//For initial todo data to be loaded when update option chosen
 	useEffect(() => {
@@ -40,13 +40,18 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
 			setTitle(todo.title);
 			setStatus(todo.status);
 		} else {
-			setTitle("");
+			setTitle(" ");
 			setStatus("incomplete");
 		}
 	}, [type, todo, modalOpen]);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+
+		if (title === "") {
+			toast.error("Please enter a title");
+			return;
+		}
 
 		//Sending todo data data to the store to be added to the list
 		if (title && status) {
@@ -61,11 +66,6 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
 				);
 				//Adding pop-up message
 				toast.success("Task added successfully");
-			}
-			//For updating the Todo
-			if (title === "") {
-				toast.error("Please enter a title");
-				return;
 			}
 
 			//When todo is edited

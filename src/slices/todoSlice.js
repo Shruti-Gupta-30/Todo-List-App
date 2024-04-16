@@ -8,7 +8,7 @@ const getInitialTodo = () => {
 		return JSON.parse(localTodoList);
 	}
 	//When No todo's are present, creating an empty array
-	window.localStorage.setItem("todoList", JSON.stringify([]));
+	window.localStorage.setItem("todoList", []);
 	return [];
 };
 
