@@ -21,7 +21,11 @@ function AppHeader() {
 				Add Task
 			</Button>
 			{/* Making dropdown list for filtering notes */}
-			<SelectButton id="status" value={filterStatus} onChange={updateFilter}>
+			<SelectButton
+				id="status"
+				value={filterStatus}
+				onChange={(e) => updateFilter(e)}
+			>
 				<option value="all">All</option>
 				<option value="incomplete">Incomplete</option>
 				<option value="complete">Complete</option>

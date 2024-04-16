@@ -22,7 +22,7 @@ const boxVariant = {
 		transition: { duration: 0.1 },
 	},
 	unchecked: {
-		background: "var(--gray-1)",
+		background: "var(--gray-2)",
 		transition: { duration: 0.1 },
 	},
 };

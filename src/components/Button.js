@@ -24,9 +24,10 @@ function Button({ children, type, variant, ...rest }) {
 }
 
 //For Dropdown list
-function SelectButton({ children, ...rest }) {
+function SelectButton({ children, id, ...rest }) {
 	return (
 		<select
+			id={id}
 			className={getClasses([styles.button, styles.button__select])}
 			{...rest}
 		>
