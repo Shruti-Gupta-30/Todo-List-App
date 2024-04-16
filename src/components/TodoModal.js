@@ -66,6 +66,7 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
 				);
 				//Adding pop-up message
 				toast.success("Task added successfully");
+				setModalOpen(false);
 			}
 
 			//When todo is edited
@@ -82,6 +83,7 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
 					);
 					//Adding pop-up message
 					toast.success("Task Updated successfully");
+					setModalOpen(false);
 				} else {
 					//when todo was not edited
 					toast.error("No Changes made");
