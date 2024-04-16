@@ -37,7 +37,7 @@ function TodoItem({ todo }) {
 		dispatch(
 			updateTodo({
 				...todo,
-				status: checked ? "incomplete" : "checked",
+				status: checked ? "incomplete" : "complete",
 			})
 		);
 	};

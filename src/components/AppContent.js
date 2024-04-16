@@ -11,10 +11,21 @@ function AppContent() {
 	const sortedTodoList = [...todoList];
 	sortedTodoList.sort((a, b) => new Date(b.time) - new Date(a.time));
 
+	//Getting the Filter Category
+	const filterStatus = useSelector((state) => state.todo.filterStatus);
+
+	//Getting todo items with the required status
+	const filteredTodoList = sortedTodoList.filter((item) => {
+		if (filterStatus === "all") {
+			return true;
+		}
+		return item.status === filterStatus;
+	});
+
 	return (
 		<div className={styles.content__wrapper}>
-			{sortedTodoList && sortedTodoList.length > 0
-				? sortedTodoList.map((todo) => <TodoItem key={todo.id} todo={todo} />)
+			{filteredTodoList && filteredTodoList.length > 0
+				? filteredTodoList.map((todo) => <TodoItem key={todo.id} todo={todo} />)
 				: "no todo found"}
 		</div>
 	);
